@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AeroMarketing — Digital Marketing for Local Service Businesses</title>
+  <meta name="description" content="AeroMarketing runs Meta and Google ads for local service businesses. More leads, more booked jobs. Book a free 35-min strategy call today." />
+  <meta property="og:title" content="AeroMarketing — More Booked Jobs for Local Service Businesses" />
+  <meta property="og:description" content="We run Meta and Google ads for local service businesses. Full funnel: ads, landing pages, GHL follow-up. Book a free strategy call." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="Aero%20M%20png/ChatGPT%20Image%20Apr%2022%2C%202026%2C%2007_23_41%20PM.png" />
+  <meta property="og:image" content="https://www.aeromarketing.org/Aero%20M%20png/ChatGPT%20Image%20Apr%2022%2C%202026%2C%2007_21_55%20PM.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "AeroMarketing",
+    "telephone": "+12485009765",
+    "email": "aeros.markets@gmail.com",
+    "address": { "@type": "PostalAddress" },
+    "priceRange": "$$"
+  }
+  </script>
+  <style>
+    :root {
+      --bg:        #111117;
+      --bg2:       #17171F;
+      --card:      #1E1E28;
+      --accent:    #E8453A;
+      --accent-h:  #D13B30;
+      --white:     #FFFFFF;
+      --heading:   #FFFFFF;
+      --body:      #8C8CA8;
+      --muted:     #56566E;
+      --border:    rgba(255,255,255,0.07);
+      --border-w:  rgba(255,255,255,0.15);
+      --radius:    10px;
+      --radius-btn:7px;
+      --shadow:    0 8px 40px rgba(0,0,0,0.5);
+      --font-h:    'Space Grotesk', sans-serif;
+      --font-b:    'DM Sans', sans-serif;
+      --max:       1140px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-b); background: var(--bg); color: var(--body); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3,h4 { font-family: var(--font-h); color: var(--heading); line-height: 1.1; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+    /* ANIMATIONS */
+    @media (prefers-reduced-motion: no-preference) {
+      .rev { opacity: 0; transform: translateY(22px); transition: opacity .6s cubic-bezier(.23,1,.32,1), transform .6s cubic-bezier(.23,1,.32,1); }
+      .rev.on { opacity: 1; transform: none; }
+      .rev[data-d="1"] { transition-delay: 80ms; }
+      .rev[data-d="2"] { transition-delay: 160ms; }
+      .rev[data-d="3"] { transition-delay: 240ms; }
+      .rev[data-d="4"] { transition-delay: 320ms; }
+      .rev[data-d="5"] { transition-delay: 400ms; }
+    }
+
+    /* BUTTONS */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-b); font-weight: 600; font-size: 1rem; min-height: 50px; padding: 13px 28px; border-radius: var(--radius-btn); border: none; cursor: pointer; text-decoration: none; white-space: nowrap; letter-spacing: -.01em; transition: background .18s cubic-bezier(.23,1,.32,1), transform .18s cubic-bezier(.23,1,.32,1), border-color .18s; }
+    .btn-p { background: var(--accent); color: #fff; }
+    .btn-o { background: transparent; color: var(--white); border: 2px solid var(--border-w); }
+    @media (hover:hover) and (pointer:fine) {
+      .btn-p:hover { background: var(--accent-h); transform: translateY(-2px); }
+      .btn-o:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.04); }
+    }
+    .btn-p:active, .btn-o:active { transform: scale(.97); transition-duration: 80ms; }
+
+    /* HEADER */
+    .hdr { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(17,17,23,.92); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid var(--border); }
+    .hdr-in { max-width: var(--max); margin: 0 auto; padding: 0 28px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .hdr-logo img { height: 44px; width: auto; mix-blend-mode: screen; }
+    .hdr-phone { font-weight: 600; font-size: .9rem; color: var(--heading); }
+    .hdr-phone a { color: var(--heading); }
+    @media (max-width: 768px) { .hdr-phone { display: none; } .hdr-in .btn { padding: 10px 16px; font-size: .875rem; min-height: 42px; } }
+
+    /* HERO — full width, no fake visuals */
+    .hero {
+      min-height: 100dvh;
+      display: flex; align-items: center;
+      padding-top: 64px;
+      position: relative; overflow: hidden;
+    }
+    /* Brand swoosh — animated orbs that slowly breathe */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 30%, rgba(255,255,255,0.035) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 80% at 90% 70%, rgba(255,255,255,0.02) 0%, transparent 50%),
+        radial-gradient(ellipse 40% 40% at 15% 60%, rgba(232,69,58,0.06) 0%, transparent 55%);
+      pointer-events: none;
+      animation: hero-orb-pulse 16s ease-in-out infinite alternate;
+    }
+    @keyframes hero-orb-pulse {
+      0%   { transform: scale(1) translate(0, 0); opacity: 1; }
+      50%  { transform: scale(1.07) translate(1.5%, -2%); opacity: 0.82; }
+      100% { transform: scale(0.96) translate(-1%, 1.5%); opacity: 0.95; }
+    }
+    .hero-inner { position: relative; z-index: 1; padding: 80px 0; }
+    .hero-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 28px;
+    }
+    .hero-label::after { content: ''; width: 28px; height: 1px; background: var(--accent); opacity: .6; }
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 800; letter-spacing: -.04em;
+      color: var(--white); max-width: 760px;
+      line-height: 1.04; margin-bottom: 24px;
+    }
+    .hero-sub {
+      font-size: 1.1rem; color: var(--body);
+      max-width: 520px; margin-bottom: 40px; line-height: 1.7;
+    }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 60px; }
+    .hero-stats { display: flex; gap: 0; flex-wrap: wrap; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; width: fit-content; }
+    .hero-stat { padding: 18px 28px; border-right: 1px solid var(--border); }
+    .hero-stat:last-child { border-right: none; }
+    .stat-v { display: block; font-family: var(--font-h); font-size: 1.25rem; font-weight: 800; color: var(--white); letter-spacing: -.025em; }
+    .stat-l { display: block; font-size: .7rem; color: var(--muted); letter-spacing: .07em; text-transform: uppercase; margin-top: 2px; }
+    @media (max-width: 640px) { .hero h1 { font-size: clamp(2.2rem, 9vw, 3rem); } .hero-stats { width: 100%; } .hero-stat { flex: 1; padding: 14px 16px; } }
+
+    /* TRUST BAR */
+    .trust { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 15px 0; overflow: hidden; }
+    .trust-track { display: flex; align-items: center; gap: 40px; width: max-content; animation: trust-scroll 24s linear infinite; }
+    .trust:hover .trust-track { animation-play-state: paused; }
+    @keyframes trust-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ti { display: flex; align-items: center; gap: 8px; font-size: .84rem; font-weight: 500; color: var(--body); white-space: nowrap; }
+    .ti-sep { width: 1px; height: 14px; background: var(--border); flex-shrink: 0; }
+    @media (max-width: 640px) { .ti-sep { display: none; } }
+
+    /* SECTIONS */
+    .sec { padding: 88px 0; }
+    .sec-alt { background: var(--bg2); }
+    .sec-hd { text-align: center; margin-bottom: 52px; }
+    .sec-hd h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 800; letter-spacing: -.035em; margin-bottom: 14px; }
+    .sec-hd p { font-size: .98rem; color: var(--body); max-width: 480px; margin: 0 auto; line-height: 1.72; }
+
+    /* SERVICES */
+    .svc-label { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .svc-addon-note { font-size: .9rem; color: var(--muted); margin-bottom: 20px; max-width: 500px; line-height: 1.6; }
+    .svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .svc-core { grid-template-columns: repeat(2,1fr); max-width: 760px; }
+    .svc-addons { grid-template-columns: repeat(2,1fr); }
+    @media (max-width: 880px) { .svc-grid { grid-template-columns: repeat(2,1fr); } .svc-core { max-width: 100%; } }
+    @media (max-width: 520px) { .svc-grid { grid-template-columns: 1fr; } .svc-core { grid-template-columns: 1fr; } .svc-addons { grid-template-columns: 1fr; } }
+    .svc-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; transition: border-color .2s cubic-bezier(.23,1,.32,1), transform .2s cubic-bezier(.23,1,.32,1); }
+    .svc-featured { border-color: rgba(232,69,58,0.2); }
+    @media (hover:hover) and (pointer:fine) { .svc-card:hover { border-color: rgba(232,69,58,0.4); transform: translateY(-3px); } }
+    .svc-icon { width: 40px; height: 40px; background: rgba(232,69,58,0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; margin-bottom: 16px; }
+    .svc-card h3 { font-size: .97rem; font-weight: 700; margin-bottom: 9px; }
+    .svc-card p { font-size: .855rem; color: var(--body); line-height: 1.65; margin-bottom: 16px; }
+    .svc-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .svc-list li { font-size: .82rem; color: var(--body); display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+    .svc-list li::before { content: ''; width: 4px; height: 4px; background: var(--accent); border-radius: 50%; flex-shrink: 0; margin-top: 7px; opacity: .7; }
+
+    /* PROCESS */
+    .proc-grid { display: grid; grid-template-columns: repeat(3,1fr); position: relative; }
+    .proc-line { position: absolute; top: 25px; left: calc(16.67% + 16px); right: calc(16.67% + 16px); height: 1px; background: linear-gradient(90deg, transparent, var(--border-w), transparent); }
+    @media (max-width: 720px) { .proc-grid { grid-template-columns: 1fr; gap: 32px; } .proc-line { display: none; } }
+    .proc-step { padding: 0 20px; text-align: center; }
+    .proc-num { width: 50px; height: 50px; background: var(--bg); border: 1px solid var(--border-w); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-h); font-size: .9rem; font-weight: 800; color: var(--accent); margin: 0 auto 18px; position: relative; z-index: 1; }
+    .proc-step h3 { font-size: .95rem; font-weight: 700; color: var(--white); margin-bottom: 9px; }
+    .proc-step p { font-size: .845rem; color: var(--body); line-height: 1.65; max-width: 210px; margin: 0 auto; }
+
+    /* WHY */
+    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+    @media (max-width: 880px) { .why-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 520px) { .why-grid { grid-template-columns: 1fr; } }
+    .why-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; transition: border-color .2s cubic-bezier(.23,1,.32,1); }
+    @media (hover:hover) and (pointer:fine) { .why-card:hover { border-color: var(--border-w); } }
+    .why-card h4 { font-size: .9rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .why-card p { font-size: .835rem; color: var(--body); line-height: 1.62; }
+
+    /* BOOKING */
+    .book-sec { padding: 96px 0; background: var(--bg); position: relative; overflow: hidden; }
+    .book-sec::before { content: ''; position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 700px; height: 500px; background: radial-gradient(ellipse, rgba(232,69,58,0.06) 0%, transparent 65%); pointer-events: none; }
+    .book-wrap { max-width: 560px; margin: 0 auto; position: relative; }
+    .book-hd { text-align: center; margin-bottom: 32px; }
+    .book-hd h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 800; letter-spacing: -.035em; margin-bottom: 12px; }
+    .book-hd p { font-size: .96rem; color: var(--body); line-height: 1.72; }
+
+    /* Form card */
+    .form-card { background: var(--card); border: 1px solid var(--border-w); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
+    .ghl-slot { min-height: 8px; }
+    #ghl-calendar { width: 100%; }
+    #ghl-calendar iframe { width: 100%; min-height: 600px; border: none; border-radius: var(--radius); display: block; }
+
+    /* FAQ */
+    .faq-wrap { max-width: 680px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; cursor: pointer; font-family: var(--font-h); font-size: .95rem; font-weight: 700; color: var(--white); gap: 16px; user-select: none; }
+    .faq-ico { font-size: 1.2rem; color: var(--accent); flex-shrink: 0; line-height: 1; transition: transform .3s cubic-bezier(.23,1,.32,1); }
+    .faq-item.on .faq-ico { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.23,1,.32,1), padding-bottom .3s cubic-bezier(.23,1,.32,1); }
+    .faq-item.on .faq-a { max-height: 280px; padding-bottom: 18px; }
+    .faq-a p { font-size: .91rem; color: var(--body); line-height: 1.75; }
+
+    /* FINAL CTA */
+    .fcta { background: var(--bg2); text-align: center; padding: 88px 24px; border-top: 1px solid var(--border); }
+    .fcta h2 { font-size: clamp(1.65rem, 3.2vw, 2.5rem); font-weight: 800; letter-spacing: -.035em; margin-bottom: 14px; max-width: 540px; margin-left: auto; margin-right: auto; }
+    .fcta p { font-size: .97rem; color: var(--body); margin-bottom: 32px; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.72; }
+    .fcta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* FOOTER */
+    .footer { background: var(--bg); border-top: 1px solid var(--border); padding: 52px 0 28px; }
+    .footer-in { max-width: var(--max); margin: 0 auto; padding: 0 28px; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; }
+    @media (max-width: 720px) { .footer-in { grid-template-columns: 1fr; gap: 28px; } }
+    .footer-logo img { height: 40px; margin-bottom: 14px; }
+    .footer-tag { font-size: .84rem; color: var(--muted); line-height: 1.65; max-width: 250px; }
+    .fc h4 { font-size: .7rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+    .fc ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .fc ul li { font-size: .84rem; color: var(--body); }
+    .fc ul li a { color: var(--body); transition: color .15s; }
+    @media (hover:hover) and (pointer:fine) { .fc ul li a:hover { color: var(--white); } }
+    .footer-bot { max-width: var(--max); margin: 28px auto 0; padding: 20px 28px 0; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .footer-copy { font-size: .78rem; color: var(--muted); }
+
+    /* MOBILE STICKY */
+    @media (max-width: 768px) {
+      .mob-sticky { position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; display: flex; background: #1A1A22; border-top: 1px solid var(--border-w); padding: 10px 14px; gap: 9px; }
+      .mob-sticky a { flex: 1; min-height: 48px; font-size: .88rem; }
+      body { padding-bottom: 72px; }
+    }
+    @media (min-width: 769px) { .mob-sticky { display: none; } }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-in">
+    <div class="hdr-logo">
+      <a href="#top"><img src="Aero%20M%20png/ChatGPT%20Image%20May%202%2C%202026%2C%2001_08_18%20PM.png" alt="AeroMarketing" /></a>
+    </div>
+    <div class="hdr-phone"><a href="tel:+12485009765">(248) 500-9765</a></div>
+    <a href="#booking" class="btn btn-p">Book a Strategy Call</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <canvas id="hero-cvs" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+  <div class="wrap hero-inner">
+    <div class="hero-label rev">Aero Marketing</div>
+    <h1 class="rev" data-d="1">Your phone should<br />be ringing.</h1>
+    <p class="hero-sub rev" data-d="2">We're dedicated to helping local service businesses grow — running ad campaigns that connect with the right people, drive results you can actually measure, and keep your pipeline full so you can focus on the work you love.</p>
+    <div class="hero-ctas rev" data-d="3">
+      <a href="#booking" class="btn btn-p">Book a Free Strategy Call</a>
+      <a href="tel:+12485009765" class="btn btn-o">Call (248) 500-9765</a>
+    </div>
+    <div class="hero-stats rev" data-d="4">
+      <div class="hero-stat">
+        <span class="stat-v">Meta + Google</span>
+        <span class="stat-l">Platforms we run</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-v">5-7 Days</span>
+        <span class="stat-l">Campaigns go live</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-v">Full Funnel</span>
+        <span class="stat-l">Ads, landing page + follow-up</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-track">
+    <div class="ti">🎯 Local Service Niche Only</div>
+    <div class="ti-sep"></div>
+    <div class="ti">📊 Weekly Reports Every Week</div>
+    <div class="ti-sep"></div>
+    <div class="ti">⚡ GHL Available as Add-On</div>
+    <div class="ti-sep"></div>
+    <div class="ti">🚀 Campaigns Live in 5-7 Days</div>
+    <div class="ti-sep"></div>
+    <div class="ti">📱 Meta + Google Ads</div>
+    <div class="ti-sep"></div>
+    <div class="ti">💬 Direct Line to Your Strategist</div>
+    <div class="ti-sep"></div>
+    <!-- duplicate for seamless loop -->
+    <div class="ti">🎯 Local Service Niche Only</div>
+    <div class="ti-sep"></div>
+    <div class="ti">📊 Weekly Reports Every Week</div>
+    <div class="ti-sep"></div>
+    <div class="ti">⚡ GHL Available as Add-On</div>
+    <div class="ti-sep"></div>
+    <div class="ti">🚀 Campaigns Live in 5-7 Days</div>
+    <div class="ti-sep"></div>
+    <div class="ti">📱 Meta + Google Ads</div>
+    <div class="ti-sep"></div>
+    <div class="ti">💬 Direct Line to Your Strategist</div>
+    <div class="ti-sep"></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">What We Can Do For You</h2>
+      <p class="rev" data-d="1">Every client starts with running their ads. The rest depends on what you need and what makes sense for your business.</p>
+    </div>
+
+    <div class="svc-label rev">Core Services</div>
+    <div class="svc-grid svc-core">
+      <div class="svc-card svc-featured rev">
+        <div class="svc-icon">📘</div>
+        <h3>Meta Ads</h3>
+        <p>Facebook and Instagram campaigns built for your service area. We build, launch, and optimize every week.</p>
+        <ul class="svc-list">
+          <li>Campaign structure and audience targeting</li>
+          <li>Ad creative and copy for your niche</li>
+          <li>Weekly optimization and reporting</li>
+        </ul>
+      </div>
+      <div class="svc-card svc-featured rev" data-d="1">
+        <div class="svc-icon">🔍</div>
+        <h3>Google Ads</h3>
+        <p>Show up when someone in your area searches for what you do. Clicks that have intent, not just curiosity.</p>
+        <ul class="svc-list">
+          <li>Search and local campaigns for your market</li>
+          <li>Keyword strategy built for your niche</li>
+          <li>Weekly optimization and reporting</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="svc-label rev" style="margin-top:40px">Available Add-Ons</div>
+    <p class="svc-addon-note rev" data-d="1">These aren't required. Depending on your budget and where you're at, we can layer these in when it makes sense.</p>
+    <div class="svc-grid svc-addons">
+      <div class="svc-card rev" data-d="1">
+        <div class="svc-icon">🖥</div>
+        <h3>Landing Page</h3>
+        <p>A dedicated page built to convert ad traffic into leads. Niche-specific and matched to your campaigns.</p>
+        <ul class="svc-list">
+          <li>Built from scratch for your niche</li>
+          <li>Copy and form optimized for conversion</li>
+          <li>Live in days, not weeks</li>
+        </ul>
+      </div>
+      <div class="svc-card rev" data-d="2">
+        <div class="svc-icon">⚡</div>
+        <h3>GHL CRM Setup</h3>
+        <p>GoHighLevel pipeline built for your business: lead capture, follow-up, booking, and deal tracking in one place.</p>
+        <ul class="svc-list">
+          <li>Pipeline set up for your sales process</li>
+          <li>Automated SMS and email sequences</li>
+          <li>Booking calendar and lead tracking</li>
+        </ul>
+      </div>
+      <div class="svc-card rev" data-d="3">
+        <div class="svc-icon">📩</div>
+        <h3>Lead Nurture Sequences</h3>
+        <p>Automated follow-up by email and SMS inside GHL so leads don't go cold while you're out on the job.</p>
+        <ul class="svc-list">
+          <li>Multi-step sequences that warm and convert</li>
+          <li>Written and set up for your niche</li>
+          <li>All tracked inside your GHL dashboard</li>
+        </ul>
+      </div>
+      <div class="svc-card rev" data-d="4">
+        <div class="svc-icon">🌐</div>
+        <h3>Website Build</h3>
+        <p>A full local business website built to represent your brand, show up on Google, and turn visitors into booked jobs.</p>
+        <ul class="svc-list">
+          <li>Multi-page site built for your niche</li>
+          <li>Conversion-focused layout and copy</li>
+          <li>Mobile-ready and fast-loading</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec sec-alt" id="process">
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">How It Works</h2>
+      <p class="rev" data-d="1">From strategy call to live campaigns in 5-7 days.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-line"></div>
+      <div class="proc-step rev">
+        <div class="proc-num">01</div>
+        <h3>Strategy Call</h3>
+        <p>We learn your business, market, and goals. 35 minutes. No pitch, no pressure.</p>
+      </div>
+      <div class="proc-step rev" data-d="1">
+        <div class="proc-num">02</div>
+        <h3>Build and Launch</h3>
+        <p>Ads, tracking, and whatever else makes sense for your setup. You review and approve before anything goes live.</p>
+      </div>
+      <div class="proc-step rev" data-d="2">
+        <div class="proc-num">03</div>
+        <h3>Leads Come In</h3>
+        <p>Campaigns go live. Leads come in. We send weekly reports and keep optimizing the numbers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">Why Local Businesses Work With Us</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rev">
+        <h4>Local Service Only</h4>
+        <p>No ecom, no info products. Every campaign is for a local business trying to book more jobs in a specific area. We stay focused so our work stays sharp.</p>
+      </div>
+      <div class="why-card rev" data-d="1">
+        <h4>Full Funnel Capability</h4>
+        <p>We don't just run ads and disappear. Landing pages, GHL setup, follow-up sequences — we can own the whole funnel when it makes sense for your budget.</p>
+      </div>
+      <div class="why-card rev" data-d="2">
+        <h4>Weekly Reports, Plain English</h4>
+        <p>A breakdown of leads, cost per lead, and campaign performance every week. No dashboards that take 20 minutes to understand.</p>
+      </div>
+      <div class="why-card rev" data-d="3">
+        <h4>You Talk to the Person Doing the Work</h4>
+        <p>Direct line to Ason. The person you book a call with is the same person building and running your campaigns. No handoffs, no go-betweens.</p>
+      </div>
+      <div class="why-card rev" data-d="4">
+        <h4>We Build Around You</h4>
+        <p>Not everyone needs the same setup. We start with what makes sense for your budget and build from there. No forcing services you don't need.</p>
+      </div>
+      <div class="why-card rev" data-d="5">
+        <h4>We Track What Actually Matters</h4>
+        <p>Cost per lead, lead quality, and whether numbers are improving week over week. Not impressions and clicks. Metrics that actually tell you something.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="book-sec" id="booking">
+  <div class="wrap">
+    <div class="book-wrap">
+      <div class="book-hd">
+        <h2 class="rev">Book a Free Strategy Call</h2>
+        <p class="rev" data-d="1">35 minutes. We'll look at your market, what's working in your niche, and whether we're a good fit.</p>
+      </div>
+      <div class="form-card rev" data-d="2">
+        <div id="ghl-calendar">
+          <iframe src="https://api.leadconnectorhq.com/widget/booking/YIvQVUN5PK03oQmG3M1G" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="YIvQVUN5PK03oQmG3M1G_1781133193835"></iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-alt" id="faq">
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">Common Questions</h2>
+    </div>
+    <div class="faq-wrap rev">
+      <div class="faq-item">
+        <div class="faq-q">What results can I expect? <span class="faq-ico">+</span></div>
+        <div class="faq-a"><p>We don't promise specific numbers. What we do is build campaigns around what's working in your niche right now, test fast, and optimize every week. The goal is a cost per lead that makes financial sense for your business.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long until leads start coming in? <span class="faq-ico">+</span></div>
+        <div class="faq-a"><p>Most campaigns go live within 5-7 business days. Leads can come in on day one. The first 2-4 weeks is the learning phase where we tighten targeting and creative. Some find their rhythm in week one. Some take a month. Honest answer.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you offer GHL setup? <span class="faq-ico">+</span></div>
+        <div class="faq-a"><p>Yes, it's an available add-on. If you want your pipeline, follow-up sequences, and booking calendar set up inside GoHighLevel, we can build that out. It's not required - if you've already got a system that works or just want to start with ads, we can do that too.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need an existing website? <span class="faq-ico">+</span></div>
+        <div class="faq-a"><p>No. We build a dedicated landing page for your campaigns. Purpose-built landing pages outperform regular websites for paid ad traffic every time. Your main site stays out of the equation.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What niches do you work with? <span class="faq-ico">+</span></div>
+        <div class="faq-a"><p>Window washing, concrete and hardscape, roofing, HVAC, and a few others. We stay focused so our campaigns stay sharp. If your niche isn't listed, book a call and we'll be straight with you about whether we can help.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if the ads aren't working? <span class="faq-ico">+</span></div>
+        <div class="faq-a"><p>We optimize every week. If something isn't performing, we change it. You'll know exactly what's happening through plain-English weekly reports. We don't hide behind vanity metrics or wait for you to ask.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="fcta">
+  <h2 class="rev">Ready to Fill Your Schedule?</h2>
+  <p class="rev" data-d="1">Book a free 35-minute strategy call. No pitch, no pressure. An honest look at what would work in your market.</p>
+  <div class="fcta-btns rev" data-d="2">
+    <a href="#booking" class="btn btn-p">Book My Strategy Call</a>
+    <a href="tel:+12485009765" class="btn btn-o">Call (248) 500-9765</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-in">
+    <div>
+      <div class="footer-logo">
+        <img src="Aero%20M%20png/ChatGPT%20Image%20May%202%2C%202026%2C%2001_08_18%20PM.png" alt="AeroMarketing" />
+      </div>
+      <p class="footer-tag">Meta and Google ads for local service businesses. Full funnel: ads, landing pages, and GHL setup.</p>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <ul>
+        <li>Meta Ads</li>
+        <li>Google Ads</li>
+        <li>Landing Pages</li>
+        <li>GHL CRM Setup</li>
+        <li>Lead Nurture Sequences</li>
+        <li>Website Build</li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+12485009765">(248) 500-9765</a></li>
+        <li><a href="mailto:aeros.markets@gmail.com">aeros.markets@gmail.com</a></li>
+        <li><a href="#booking">Book a Strategy Call</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <p class="footer-copy">&copy; 2026 AeroMarketing. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mob-sticky">
+  <a href="tel:+12485009765" class="btn btn-o">📞 Call Now</a>
+  <a href="#booking" class="btn btn-p">Book a Call</a>
+</div>
+
+<script>
+  // Scroll reveal
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.rev').forEach(el => obs.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('on');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('on'));
+      if (!isOpen) item.classList.add('on');
+    });
+  });
+
+  // Star field — hero background particles
+  (function() {
+    const cvs = document.getElementById('hero-cvs');
+    if (!cvs) return;
+    const ctx = cvs.getContext('2d');
+    let W, H, pts = [];
+    const COUNT = window.innerWidth < 768 ? 50 : 90;
+    const LINK  = 130;
+
+    function resize() {
+      W = cvs.width  = cvs.offsetWidth;
+      H = cvs.height = cvs.offsetHeight;
+    }
+
+    function mkPt() {
+      return {
+        x:  Math.random() * W,
+        y:  Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: (Math.random() - 0.5) * 0.25,
+        r:  Math.random() * 1.2 + 0.4,
+        a:  Math.random() * 0.55 + 0.2,
+        ph: Math.random() * Math.PI * 2,
+        sp: Math.random() * 0.012 + 0.004,
+      };
+    }
+
+    function tick() {
+      ctx.clearRect(0, 0, W, H);
+      for (let i = 0; i < pts.length; i++) {
+        const p = pts[i];
+        p.ph += p.sp;
+        p.x  += p.vx;
+        p.y  += p.vy;
+        if (p.x < 0) p.x = W;
+        if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H;
+        if (p.y > H) p.y = 0;
+        const alpha = p.a * (0.55 + 0.45 * Math.sin(p.ph));
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255,255,255,${alpha.toFixed(3)})`;
+        ctx.fill();
+        for (let j = i + 1; j < pts.length; j++) {
+          const q  = pts[j];
+          const dx = p.x - q.x;
+          const dy = p.y - q.y;
+          const d  = Math.sqrt(dx * dx + dy * dy);
+          if (d < LINK) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.strokeStyle = `rgba(255,255,255,${((1 - d / LINK) * 0.07).toFixed(3)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+    pts = Array.from({ length: COUNT }, mkPt);
+    tick();
+  })();
+</script>
+</body>
+</html>
