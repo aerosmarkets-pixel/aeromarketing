@@ -8,8 +8,12 @@
   <meta property="og:title" content="AeroMarketing — More Booked Jobs for Local Service Businesses" />
   <meta property="og:description" content="We run Meta and Google ads for local service businesses. Full funnel: ads, landing pages, GHL follow-up. Book a free strategy call." />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/png" href="Aero%20M%20png/ChatGPT%20Image%20Apr%2022%2C%202026%2C%2007_23_41%20PM.png" />
-  <meta property="og:image" content="https://www.aeromarketing.org/Aero%20M%20png/ChatGPT%20Image%20Apr%2022%2C%202026%2C%2007_21_55%20PM.png" />
+  <meta property="og:url" content="https://www.aeromarketing.org/" />
+  <link rel="canonical" href="https://www.aeromarketing.org/" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta property="og:image" content="https://www.aeromarketing.org/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -20,7 +24,7 @@
     "name": "AeroMarketing",
     "telephone": "+12485009765",
     "email": "aeros.markets@gmail.com",
-    "address": { "@type": "PostalAddress" },
+    "url": "https://www.aeromarketing.org/",
     "priceRange": "$$"
   }
   </script>
@@ -190,16 +194,19 @@
     .book-hd h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 800; letter-spacing: -.035em; margin-bottom: 12px; }
     .book-hd p { font-size: .96rem; color: var(--body); line-height: 1.72; }
 
-    /* Form card */
-    .form-card { background: var(--card); border: 1px solid var(--border-w); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
-    .ghl-slot { min-height: 8px; }
-    #ghl-calendar { width: 100%; }
-    #ghl-calendar iframe { width: 100%; min-height: 600px; border: none; border-radius: var(--radius); display: block; }
+    /* Booking CTA card */
+    .book-card { background: var(--card); border: 1px solid var(--border-w); border-radius: var(--radius); padding: 40px 32px; box-shadow: var(--shadow); text-align: center; }
+    .book-points { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-bottom: 28px; }
+    .bp { display: flex; align-items: center; gap: 7px; font-size: .85rem; font-weight: 500; color: var(--body); white-space: nowrap; }
+    .bp::before { content: '✓'; color: var(--accent); font-weight: 700; }
+    .book-card .btn { min-width: 260px; font-size: 1.05rem; min-height: 54px; }
+    .book-note { margin-top: 16px; font-size: .83rem; color: var(--muted); }
 
     /* FAQ */
     .faq-wrap { max-width: 680px; margin: 0 auto; }
     .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-q { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; cursor: pointer; font-family: var(--font-h); font-size: .95rem; font-weight: 700; color: var(--white); gap: 16px; user-select: none; }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; width: 100%; background: transparent; border: 0; text-align: left; padding: 20px 0; cursor: pointer; font-family: var(--font-h); font-size: .95rem; font-weight: 700; color: var(--white); gap: 16px; user-select: none; }
+    .faq-q:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
     .faq-ico { font-size: 1.2rem; color: var(--accent); flex-shrink: 0; line-height: 1; transition: transform .3s cubic-bezier(.23,1,.32,1); }
     .faq-item.on .faq-ico { transform: rotate(45deg); }
     .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.23,1,.32,1), padding-bottom .3s cubic-bezier(.23,1,.32,1); }
@@ -241,10 +248,10 @@
 <header class="hdr">
   <div class="hdr-in">
     <div class="hdr-logo">
-      <a href="#top"><img src="Aero%20M%20png/ChatGPT%20Image%20May%202%2C%202026%2C%2001_08_18%20PM.png" alt="AeroMarketing" /></a>
+      <a href="#top"><img src="logo.png" alt="AeroMarketing" /></a>
     </div>
     <div class="hdr-phone"><a href="tel:+12485009765">(248) 500-9765</a></div>
-    <a href="#booking" class="btn btn-p">Book a Strategy Call</a>
+    <a href="book.html" class="btn btn-p">Book a Strategy Call</a>
   </div>
 </header>
 
@@ -256,7 +263,7 @@
     <h1 class="rev" data-d="1">Your phone should<br />be ringing.</h1>
     <p class="hero-sub rev" data-d="2">We're dedicated to helping local service businesses grow — running ad campaigns that connect with the right people, drive results you can actually measure, and keep your pipeline full so you can focus on the work you love.</p>
     <div class="hero-ctas rev" data-d="3">
-      <a href="#booking" class="btn btn-p">Book a Free Strategy Call</a>
+      <a href="book.html" class="btn btn-p">Book a Free Strategy Call</a>
       <a href="tel:+12485009765" class="btn btn-o">Call (248) 500-9765</a>
     </div>
     <div class="hero-stats rev" data-d="4">
@@ -457,11 +464,14 @@
         <h2 class="rev">Book a Free Strategy Call</h2>
         <p class="rev" data-d="1">35 minutes. We'll look at your market, what's working in your niche, and whether we're a good fit.</p>
       </div>
-      <div class="form-card rev" data-d="2">
-        <div id="ghl-calendar">
-          <iframe src="https://api.leadconnectorhq.com/widget/booking/YIvQVUN5PK03oQmG3M1G" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="YIvQVUN5PK03oQmG3M1G_1781133193835"></iframe>
-          <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+      <div class="book-card rev" data-d="2">
+        <div class="book-points">
+          <div class="bp">35 minutes</div>
+          <div class="bp">No pitch, no pressure</div>
+          <div class="bp">Honest look at your market</div>
         </div>
+        <a href="book.html" class="btn btn-p">Pick a Time &rarr;</a>
+        <p class="book-note">Takes you to our booking calendar. Choose any open slot.</p>
       </div>
     </div>
   </div>
@@ -475,27 +485,27 @@
     </div>
     <div class="faq-wrap rev">
       <div class="faq-item">
-        <div class="faq-q">What results can I expect? <span class="faq-ico">+</span></div>
+        <button class="faq-q" aria-expanded="false">What results can I expect? <span class="faq-ico">+</span></button>
         <div class="faq-a"><p>We don't promise specific numbers. What we do is build campaigns around what's working in your niche right now, test fast, and optimize every week. The goal is a cost per lead that makes financial sense for your business.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">How long until leads start coming in? <span class="faq-ico">+</span></div>
+        <button class="faq-q" aria-expanded="false">How long until leads start coming in? <span class="faq-ico">+</span></button>
         <div class="faq-a"><p>Most campaigns go live within 5-7 business days. Leads can come in on day one. The first 2-4 weeks is the learning phase where we tighten targeting and creative. Some find their rhythm in week one. Some take a month. Honest answer.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Do you offer GHL setup? <span class="faq-ico">+</span></div>
+        <button class="faq-q" aria-expanded="false">Do you offer GHL setup? <span class="faq-ico">+</span></button>
         <div class="faq-a"><p>Yes, it's an available add-on. If you want your pipeline, follow-up sequences, and booking calendar set up inside GoHighLevel, we can build that out. It's not required - if you've already got a system that works or just want to start with ads, we can do that too.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Do I need an existing website? <span class="faq-ico">+</span></div>
+        <button class="faq-q" aria-expanded="false">Do I need an existing website? <span class="faq-ico">+</span></button>
         <div class="faq-a"><p>No. We build a dedicated landing page for your campaigns. Purpose-built landing pages outperform regular websites for paid ad traffic every time. Your main site stays out of the equation.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What niches do you work with? <span class="faq-ico">+</span></div>
+        <button class="faq-q" aria-expanded="false">What niches do you work with? <span class="faq-ico">+</span></button>
         <div class="faq-a"><p>Window washing, concrete and hardscape, roofing, HVAC, and a few others. We stay focused so our campaigns stay sharp. If your niche isn't listed, book a call and we'll be straight with you about whether we can help.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What if the ads aren't working? <span class="faq-ico">+</span></div>
+        <button class="faq-q" aria-expanded="false">What if the ads aren't working? <span class="faq-ico">+</span></button>
         <div class="faq-a"><p>We optimize every week. If something isn't performing, we change it. You'll know exactly what's happening through plain-English weekly reports. We don't hide behind vanity metrics or wait for you to ask.</p></div>
       </div>
     </div>
@@ -507,7 +517,7 @@
   <h2 class="rev">Ready to Fill Your Schedule?</h2>
   <p class="rev" data-d="1">Book a free 35-minute strategy call. No pitch, no pressure. An honest look at what would work in your market.</p>
   <div class="fcta-btns rev" data-d="2">
-    <a href="#booking" class="btn btn-p">Book My Strategy Call</a>
+    <a href="book.html" class="btn btn-p">Book My Strategy Call</a>
     <a href="tel:+12485009765" class="btn btn-o">Call (248) 500-9765</a>
   </div>
 </section>
@@ -517,7 +527,7 @@
   <div class="footer-in">
     <div>
       <div class="footer-logo">
-        <img src="Aero%20M%20png/ChatGPT%20Image%20May%202%2C%202026%2C%2001_08_18%20PM.png" alt="AeroMarketing" />
+        <img src="logo.png" alt="AeroMarketing" loading="lazy" />
       </div>
       <p class="footer-tag">Meta and Google ads for local service businesses. Full funnel: ads, landing pages, and GHL setup.</p>
     </div>
@@ -537,7 +547,7 @@
       <ul>
         <li><a href="tel:+12485009765">(248) 500-9765</a></li>
         <li><a href="mailto:aeros.markets@gmail.com">aeros.markets@gmail.com</a></li>
-        <li><a href="#booking">Book a Strategy Call</a></li>
+        <li><a href="book.html">Book a Strategy Call</a></li>
       </ul>
     </div>
   </div>
@@ -549,7 +559,7 @@
 <!-- MOBILE STICKY BAR -->
 <div class="mob-sticky">
   <a href="tel:+12485009765" class="btn btn-o">📞 Call Now</a>
-  <a href="#booking" class="btn btn-p">Book a Call</a>
+  <a href="book.html" class="btn btn-p">Book a Call</a>
 </div>
 
 <script>
@@ -565,7 +575,8 @@
       const item = q.parentElement;
       const isOpen = item.classList.contains('on');
       document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('on'));
-      if (!isOpen) item.classList.add('on');
+      document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      if (!isOpen) { item.classList.add('on'); q.setAttribute('aria-expanded', 'true'); }
     });
   });
 
