@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /book.html
+Disallow: /thank-you.html
+
+Sitemap: https://www.aeromarketing.org/sitemap.xml

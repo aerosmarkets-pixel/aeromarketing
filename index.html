@@ -14,6 +14,10 @@
   <meta property="og:image" content="https://www.aeromarketing.org/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AeroMarketing — More Booked Jobs for Local Service Businesses" />
+  <meta name="twitter:description" content="We run Meta and Google ads for local service businesses. Full funnel: ads, landing pages, GHL follow-up. Book a free strategy call." />
+  <meta name="twitter:image" content="https://www.aeromarketing.org/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -25,6 +29,8 @@
     "telephone": "+12485009765",
     "email": "aeros.markets@gmail.com",
     "url": "https://www.aeromarketing.org/",
+    "image": "https://www.aeromarketing.org/og-image.png",
+    "areaServed": "United States",
     "priceRange": "$$"
   }
   </script>
@@ -38,7 +44,7 @@
       --white:     #FFFFFF;
       --heading:   #FFFFFF;
       --body:      #8C8CA8;
-      --muted:     #56566E;
+      --muted:     #8484A0;
       --border:    rgba(255,255,255,0.07);
       --border-w:  rgba(255,255,255,0.15);
       --radius:    10px;
@@ -66,6 +72,11 @@
       .rev[data-d="3"] { transition-delay: 240ms; }
       .rev[data-d="4"] { transition-delay: 320ms; }
       .rev[data-d="5"] { transition-delay: 400ms; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero::before { animation: none; }
+      .trust-track { animation: none; transform: none; }
+      * { scroll-behavior: auto !important; }
     }
 
     /* BUTTONS */
@@ -584,8 +595,10 @@
   (function() {
     const cvs = document.getElementById('hero-cvs');
     if (!cvs) return;
+    // Respect reduced-motion: leave the hero static
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const ctx = cvs.getContext('2d');
-    let W, H, pts = [];
+    let W, H, pts = [], raf = null, running = false;
     const COUNT = window.innerWidth < 768 ? 50 : 90;
     const LINK  = 130;
 
@@ -638,13 +651,25 @@
           }
         }
       }
-      requestAnimationFrame(tick);
+      raf = requestAnimationFrame(tick);
     }
+
+    function start() { if (!running) { running = true; tick(); } }
+    function stop()  { running = false; if (raf) cancelAnimationFrame(raf); }
 
     window.addEventListener('resize', resize);
     resize();
     pts = Array.from({ length: COUNT }, mkPt);
-    tick();
+
+    // Only animate while the hero is on screen
+    const hero = document.getElementById('top');
+    if ('IntersectionObserver' in window && hero) {
+      new IntersectionObserver((entries) => {
+        entries[0].isIntersecting ? start() : stop();
+      }, { threshold: 0 }).observe(hero);
+    } else {
+      start();
+    }
   })();
 </script>
 </body>
