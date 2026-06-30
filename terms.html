@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — AeroMarketing</title>
+  <meta name="description" content="AeroMarketing's terms of service. Read before booking a strategy call or engaging our services." />
+  <link rel="canonical" href="https://www.aeromarketing.org/terms.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #111117;
+      --bg2:       #17171F;
+      --card:      #1E1E28;
+      --accent:    #E8453A;
+      --accent-h:  #D13B30;
+      --white:     #FFFFFF;
+      --heading:   #FFFFFF;
+      --body:      #8C8CA8;
+      --muted:     #8484A0;
+      --border:    rgba(255,255,255,0.07);
+      --border-w:  rgba(255,255,255,0.15);
+      --radius:    10px;
+      --radius-btn:7px;
+      --shadow:    0 8px 40px rgba(0,0,0,0.5);
+      --font-h:    'Space Grotesk', sans-serif;
+      --font-b:    'DM Sans', sans-serif;
+      --max:       1140px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-b); background: var(--bg); color: var(--body); line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100dvh; display: flex; flex-direction: column; }
+    h1, h2, h3 { font-family: var(--font-h); color: var(--heading); line-height: 1.15; }
+    a { color: var(--accent); text-decoration: none; transition: color .15s; }
+    a:hover { color: var(--accent-h); }
+    img { display: block; max-width: 100%; height: auto; }
+
+    /* HEADER */
+    .hdr { background: rgba(17,17,23,.92); border-bottom: 1px solid var(--border); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .hdr-in { max-width: var(--max); margin: 0 auto; padding: 0 28px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .hdr-logo img { height: 44px; width: auto; mix-blend-mode: screen; }
+    .hdr-phone { font-weight: 600; font-size: .9rem; color: var(--heading); }
+    .hdr-phone a { color: var(--heading); text-decoration: none; }
+    .hdr-back { font-size: .85rem; color: var(--body); transition: color .15s; text-decoration: none; }
+    @media (hover:hover) { .hdr-back:hover { color: var(--white); } }
+    @media (max-width: 640px) { .hdr-phone { display: none; } }
+
+    /* MAIN */
+    main { flex: 1; padding: 64px 0 96px; }
+
+    /* LEGAL CONTENT WRAPPER */
+    .legal-wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+    .legal-header { padding: 48px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
+    .legal-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 18px;
+    }
+    .legal-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -.035em; margin-bottom: 14px; }
+    .legal-meta { font-size: .875rem; color: var(--muted); }
+
+    /* CONTENT SECTIONS */
+    .legal-section { margin-bottom: 44px; }
+    .legal-section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      color: var(--heading);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-section p { font-size: .95rem; color: var(--body); line-height: 1.78; margin-bottom: 14px; }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section ul { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 14px 0; padding-left: 0; }
+    .legal-section ul li { font-size: .95rem; color: var(--body); line-height: 1.7; display: flex; align-items: flex-start; gap: 10px; }
+    .legal-section ul li::before { content: ''; width: 4px; height: 4px; background: var(--accent); border-radius: 50%; flex-shrink: 0; margin-top: 9px; opacity: .7; }
+
+    /* IMPORTANT NOTICE CALLOUT */
+    .notice-callout { background: var(--card); border: 1px solid rgba(232,69,58,0.25); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 22px 28px; margin: 18px 0; }
+    .notice-callout p { font-size: .93rem; color: var(--body); line-height: 1.78; margin-bottom: 10px; }
+    .notice-callout p:last-child { margin-bottom: 0; }
+    .notice-callout strong { color: var(--white); font-weight: 600; }
+
+    /* FOOTER */
+    .footer { background: var(--bg); border-top: 1px solid var(--border); padding: 52px 0 28px; }
+    .footer-in { max-width: var(--max); margin: 0 auto; padding: 0 28px; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; }
+    @media (max-width: 720px) { .footer-in { grid-template-columns: 1fr; gap: 28px; } }
+    .footer-logo img { height: 40px; margin-bottom: 14px; mix-blend-mode: screen; }
+    .footer-tag { font-size: .84rem; color: var(--muted); line-height: 1.65; max-width: 250px; }
+    .fc h4 { font-size: .7rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+    .fc ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .fc ul li { font-size: .84rem; color: var(--body); }
+    .fc ul li::before { display: none; }
+    .fc ul li a { color: var(--body); transition: color .15s; text-decoration: none; }
+    @media (hover:hover) and (pointer:fine) { .fc ul li a:hover { color: var(--white); } }
+    .footer-bot { max-width: var(--max); margin: 28px auto 0; padding: 20px 28px 0; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .footer-copy { font-size: .78rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <div class="hdr-logo">
+      <a href="index.html"><img src="logo.png" alt="AeroMarketing" /></a>
+    </div>
+    <div class="hdr-phone"><a href="tel:+12485009765">(248) 500-9765</a></div>
+    <a href="index.html" class="hdr-back">&larr; Back to site</a>
+  </div>
+</header>
+
+<main>
+  <div class="legal-wrap">
+
+    <div class="legal-header">
+      <div class="legal-tag">Legal</div>
+      <h1>Terms of Service</h1>
+      <p class="legal-meta">Last updated: June 19, 2026</p>
+    </div>
+
+    <!-- 1. ACCEPTANCE -->
+    <div class="legal-section">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By visiting this website, submitting a form, booking a strategy call, or engaging AeroMarketing for any services, you agree to these Terms of Service. If you do not agree, please do not use this website or our services.</p>
+      <p>These terms apply to your access and use of <a href="https://www.aeromarketing.org">https://www.aeromarketing.org</a> and any services provided by AeroMarketing. We may update these terms periodically and will post the updated version on this page.</p>
+    </div>
+
+    <!-- 2. DESCRIPTION OF SERVICES -->
+    <div class="legal-section">
+      <h2>2. Description of Services</h2>
+      <p>AeroMarketing provides digital advertising and marketing services for local service businesses. Our core services include:</p>
+      <ul>
+        <li>Meta (Facebook and Instagram) ad campaign management</li>
+        <li>Google Ads campaign management</li>
+        <li>Landing page design and development</li>
+        <li>GoHighLevel (GHL) CRM setup and configuration</li>
+        <li>Lead nurture sequences (email and SMS automation)</li>
+        <li>Website design and development for local businesses</li>
+      </ul>
+      <p>The scope of services for each client is defined by the individual service agreement or contract between AeroMarketing and that client. This website is informational and does not constitute an offer or binding agreement.</p>
+    </div>
+
+    <!-- 3. NO GUARANTEE OF RESULTS -->
+    <div class="legal-section">
+      <h2>3. No Guarantee of Results</h2>
+      <div class="notice-callout">
+        <p><strong>AeroMarketing does not guarantee specific advertising outcomes, lead volume, revenue, or return on ad spend.</strong></p>
+        <p>Advertising results depend on a wide range of factors outside our control, including market conditions, ad platform algorithm changes, competitive landscape, offer quality, and client responsiveness to leads. We do not promise or represent that any client will achieve specific results from our services.</p>
+        <p>We work hard to build campaigns that perform and optimize them continuously, but results vary and past performance in any niche is not a guarantee of future results for any individual client.</p>
+      </div>
+    </div>
+
+    <!-- 4. CLIENT RESPONSIBILITIES -->
+    <div class="legal-section">
+      <h2>4. Client Responsibilities</h2>
+      <p>If you engage AeroMarketing for services, you agree to:</p>
+      <ul>
+        <li>Provide accurate and complete information about your business, services, and target market</li>
+        <li>Grant necessary access to ad accounts, Business Managers, and other platforms required to deliver the services</li>
+        <li>Respond to communications in a reasonable timeframe so campaigns can launch and be managed effectively</li>
+        <li>Comply with the terms of service and advertising policies of all platforms used (including Meta and Google)</li>
+        <li>Maintain sufficient ad spend budget as agreed and ensure payment accounts remain in good standing</li>
+        <li>Review and approve ad creatives and copy before campaigns go live when approvals are requested</li>
+      </ul>
+      <p>AeroMarketing is not responsible for campaign delays or underperformance caused by a client's failure to meet these responsibilities.</p>
+    </div>
+
+    <!-- 5. PAYMENTS & RETAINERS -->
+    <div class="legal-section">
+      <h2>5. Payments and Retainers</h2>
+      <p>AeroMarketing's services are provided on a retainer basis under the terms defined in each client's individual service agreement or contract. Payment amounts, billing cycles, and terms are specified in that agreement and are binding upon execution.</p>
+      <p>This website is informational only. Pricing discussed on strategy calls or in proposals is subject to change until a written agreement is signed. No payment obligation arises from visiting this website or booking a strategy call.</p>
+      <p>Ad spend is separate from AeroMarketing's management fee. Clients are responsible for funding their own ad accounts directly with Meta and/or Google.</p>
+    </div>
+
+    <!-- 6. INTELLECTUAL PROPERTY -->
+    <div class="legal-section">
+      <h2>6. Intellectual Property</h2>
+      <p>All content on this website, including text, graphics, logos, and design, is owned by AeroMarketing and protected by applicable intellectual property laws. You may not reproduce, distribute, or use any content from this site without our prior written permission.</p>
+      <p>Ad creative, copy, and other deliverables produced for clients under a service agreement are covered by the terms of that agreement.</p>
+    </div>
+
+    <!-- 7. THIRD-PARTY PLATFORMS -->
+    <div class="legal-section">
+      <h2>7. Third-Party Platforms</h2>
+      <p>AeroMarketing manages advertising campaigns on platforms operated by third parties, including Meta (Facebook and Instagram) and Google. Each of these platforms has its own terms of service, advertising policies, and community standards.</p>
+      <p>AeroMarketing is not responsible for:</p>
+      <ul>
+        <li>Policy changes, ad disapprovals, or account restrictions imposed by Meta, Google, or any other platform</li>
+        <li>Platform outages, algorithm changes, or targeting limitations that affect campaign performance</li>
+        <li>Actions taken by platform support teams on client ad accounts</li>
+      </ul>
+      <p>We will work with clients to respond to platform issues, but we cannot override or circumvent platform decisions.</p>
+    </div>
+
+    <!-- 8. LIMITATION OF LIABILITY -->
+    <div class="legal-section">
+      <h2>8. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law, AeroMarketing's total liability for any claim arising from these terms or from our services, whether in contract, tort, or otherwise, will not exceed the total amount paid by you to AeroMarketing in the three months immediately preceding the claim.</p>
+      <p>AeroMarketing is not liable for indirect, incidental, consequential, special, or punitive damages of any kind, including lost revenue, lost profits, or loss of business opportunities, even if we have been advised of the possibility of such damages.</p>
+    </div>
+
+    <!-- 9. DISCLAIMER OF WARRANTIES -->
+    <div class="legal-section">
+      <h2>9. Disclaimer of Warranties</h2>
+      <p>This website and all information on it are provided "as is" without warranties of any kind, either express or implied. AeroMarketing makes no warranties regarding the accuracy, completeness, or reliability of any content on this site.</p>
+      <p>We do not warrant that the website will be uninterrupted or error-free, or that any defects will be corrected.</p>
+    </div>
+
+    <!-- 10. SMS CONSENT REFERENCE -->
+    <div class="legal-section">
+      <h2>10. SMS and Communications Consent</h2>
+      <p>By providing your phone number through our website or booking forms, you may be consenting to receive SMS messages from AeroMarketing. The full terms governing SMS communications, including opt-out instructions, message frequency disclosures, and our data sharing policy for SMS opt-in data, are covered in our <a href="privacy.html">Privacy Policy, Section 4</a>.</p>
+      <p>Consent to receive SMS messages is not a condition of any purchase or service engagement.</p>
+    </div>
+
+    <!-- 11. GOVERNING LAW -->
+    <div class="legal-section">
+      <h2>11. Governing Law</h2>
+      <p>These Terms of Service are governed by the laws of the United States. The specific state jurisdiction applicable to any dispute will be as defined in your individual service agreement with AeroMarketing.</p>
+      <p>If any provision of these terms is found to be unenforceable, the remaining provisions will continue in full effect.</p>
+    </div>
+
+    <!-- 12. CHANGES TO TERMS -->
+    <div class="legal-section">
+      <h2>12. Changes to These Terms</h2>
+      <p>We may update these Terms of Service at any time. When we do, we will update the "Last updated" date at the top of this page. Your continued use of this website after changes are posted constitutes your acceptance of the updated terms.</p>
+      <p>If you are a current client, material changes to service terms will be communicated through your existing service agreement process.</p>
+    </div>
+
+    <!-- 13. CONTACT US -->
+    <div class="legal-section">
+      <h2>13. Contact Us</h2>
+      <p>If you have questions about these Terms of Service, you can reach us here:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:aeros.markets@gmail.com">aeros.markets@gmail.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+12485009765">(248) 500-9765</a></li>
+        <li><strong>Website:</strong> <a href="https://www.aeromarketing.org">https://www.aeromarketing.org</a></li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-in">
+    <div>
+      <div class="footer-logo">
+        <img src="logo.png" alt="AeroMarketing" loading="lazy" />
+      </div>
+      <p class="footer-tag">Meta and Google ads for local service businesses. Full funnel: ads, landing pages, and GHL setup.</p>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <ul>
+        <li>Meta Ads</li>
+        <li>Google Ads</li>
+        <li>Landing Pages</li>
+        <li>GHL CRM Setup</li>
+        <li>Lead Nurture Sequences</li>
+        <li>Website Build</li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+12485009765">(248) 500-9765</a></li>
+        <li><a href="mailto:aeros.markets@gmail.com">aeros.markets@gmail.com</a></li>
+        <li><a href="book.html">Book a Strategy Call</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <p class="footer-copy">&copy; 2026 AeroMarketing. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

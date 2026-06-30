@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — AeroMarketing</title>
+  <meta name="description" content="AeroMarketing's privacy policy. How we collect, use, and protect your information, including our SMS messaging terms." />
+  <link rel="canonical" href="https://www.aeromarketing.org/privacy.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #111117;
+      --bg2:       #17171F;
+      --card:      #1E1E28;
+      --accent:    #E8453A;
+      --accent-h:  #D13B30;
+      --white:     #FFFFFF;
+      --heading:   #FFFFFF;
+      --body:      #8C8CA8;
+      --muted:     #8484A0;
+      --border:    rgba(255,255,255,0.07);
+      --border-w:  rgba(255,255,255,0.15);
+      --radius:    10px;
+      --radius-btn:7px;
+      --shadow:    0 8px 40px rgba(0,0,0,0.5);
+      --font-h:    'Space Grotesk', sans-serif;
+      --font-b:    'DM Sans', sans-serif;
+      --max:       1140px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-b); background: var(--bg); color: var(--body); line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100dvh; display: flex; flex-direction: column; }
+    h1, h2, h3 { font-family: var(--font-h); color: var(--heading); line-height: 1.15; }
+    a { color: var(--accent); text-decoration: none; transition: color .15s; }
+    a:hover { color: var(--accent-h); }
+    img { display: block; max-width: 100%; height: auto; }
+
+    /* HEADER */
+    .hdr { background: rgba(17,17,23,.92); border-bottom: 1px solid var(--border); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .hdr-in { max-width: var(--max); margin: 0 auto; padding: 0 28px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .hdr-logo img { height: 44px; width: auto; mix-blend-mode: screen; }
+    .hdr-phone { font-weight: 600; font-size: .9rem; color: var(--heading); }
+    .hdr-phone a { color: var(--heading); text-decoration: none; }
+    .hdr-back { font-size: .85rem; color: var(--body); transition: color .15s; text-decoration: none; }
+    @media (hover:hover) { .hdr-back:hover { color: var(--white); } }
+    @media (max-width: 640px) { .hdr-phone { display: none; } }
+
+    /* MAIN */
+    main { flex: 1; padding: 64px 0 96px; }
+
+    /* LEGAL CONTENT WRAPPER */
+    .legal-wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+    .legal-header { padding: 48px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
+    .legal-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 18px;
+    }
+    .legal-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -.035em; margin-bottom: 14px; }
+    .legal-meta { font-size: .875rem; color: var(--muted); }
+
+    /* CONTENT SECTIONS */
+    .legal-section { margin-bottom: 44px; }
+    .legal-section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      color: var(--heading);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-section p { font-size: .95rem; color: var(--body); line-height: 1.78; margin-bottom: 14px; }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section ul { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 14px 0; padding-left: 0; }
+    .legal-section ul li { font-size: .95rem; color: var(--body); line-height: 1.7; display: flex; align-items: flex-start; gap: 10px; }
+    .legal-section ul li::before { content: ''; width: 4px; height: 4px; background: var(--accent); border-radius: 50%; flex-shrink: 0; margin-top: 9px; opacity: .7; }
+
+    /* SMS NOTICE CALLOUT */
+    .sms-callout { background: var(--card); border: 1px solid rgba(232,69,58,0.25); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 24px 28px; margin: 20px 0; }
+    .sms-callout p { font-size: .93rem; color: var(--body); line-height: 1.78; margin-bottom: 12px; }
+    .sms-callout p:last-child { margin-bottom: 0; }
+    .sms-callout strong { color: var(--white); font-weight: 600; }
+
+    /* CARRIER STATEMENT — visually distinct for compliance scanners */
+    .carrier-statement { background: var(--bg2); border: 1px solid var(--border-w); border-radius: var(--radius); padding: 20px 24px; margin: 20px 0; }
+    .carrier-statement p { font-size: .92rem; color: var(--white); line-height: 1.72; font-style: italic; }
+
+    /* FOOTER */
+    .footer { background: var(--bg); border-top: 1px solid var(--border); padding: 52px 0 28px; }
+    .footer-in { max-width: var(--max); margin: 0 auto; padding: 0 28px; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; }
+    @media (max-width: 720px) { .footer-in { grid-template-columns: 1fr; gap: 28px; } }
+    .footer-logo img { height: 40px; margin-bottom: 14px; mix-blend-mode: screen; }
+    .footer-tag { font-size: .84rem; color: var(--muted); line-height: 1.65; max-width: 250px; }
+    .fc h4 { font-size: .7rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+    .fc ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .fc ul li { font-size: .84rem; color: var(--body); }
+    .fc ul li::before { display: none; }
+    .fc ul li a { color: var(--body); transition: color .15s; text-decoration: none; }
+    @media (hover:hover) and (pointer:fine) { .fc ul li a:hover { color: var(--white); } }
+    .footer-bot { max-width: var(--max); margin: 28px auto 0; padding: 20px 28px 0; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .footer-copy { font-size: .78rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <div class="hdr-logo">
+      <a href="index.html"><img src="logo.png" alt="AeroMarketing" /></a>
+    </div>
+    <div class="hdr-phone"><a href="tel:+12485009765">(248) 500-9765</a></div>
+    <a href="index.html" class="hdr-back">&larr; Back to site</a>
+  </div>
+</header>
+
+<main>
+  <div class="legal-wrap">
+
+    <div class="legal-header">
+      <div class="legal-tag">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="legal-meta">Last updated: June 19, 2026</p>
+    </div>
+
+    <!-- 1. INTRODUCTION -->
+    <div class="legal-section">
+      <h2>1. Who We Are</h2>
+      <p>AeroMarketing is a digital marketing agency that runs Meta and Google ad campaigns for local service businesses. We help local businesses generate more leads through paid advertising, landing pages, and follow-up automation.</p>
+      <p>This Privacy Policy explains what information we collect when you visit our website or reach out to us, how we use it, and your rights regarding that information. If you have questions, see Section 12 for how to contact us.</p>
+      <p><strong>Website:</strong> <a href="https://www.aeromarketing.org">https://www.aeromarketing.org</a></p>
+    </div>
+
+    <!-- 2. INFORMATION WE COLLECT -->
+    <div class="legal-section">
+      <h2>2. Information We Collect</h2>
+      <p>We collect information in two ways: information you give us directly, and basic usage data collected automatically.</p>
+      <p><strong>Information you provide:</strong></p>
+      <ul>
+        <li>Name, email address, and phone number submitted through our contact or booking forms</li>
+        <li>Business name, niche, and details about your advertising goals when you book a strategy call</li>
+        <li>Any other information you choose to share when communicating with us</li>
+      </ul>
+      <p><strong>Information collected automatically:</strong></p>
+      <ul>
+        <li>Basic analytics and usage data (pages visited, time on site, browser type) through standard analytics tools</li>
+        <li>IP address and general location (city/region level) for analytics purposes</li>
+        <li>Cookie and tracking data as described in Section 6</li>
+      </ul>
+    </div>
+
+    <!-- 3. HOW WE USE YOUR INFORMATION -->
+    <div class="legal-section">
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Respond to your inquiries and schedule strategy calls</li>
+        <li>Provide the marketing services you've engaged us for</li>
+        <li>Send service-related communications, including appointment confirmations and reminders</li>
+        <li>Send marketing or promotional messages to contacts who have opted in to receive them</li>
+        <li>Improve our website and services based on how people use them</li>
+        <li>Comply with applicable laws and regulations</li>
+      </ul>
+      <p>We will not use your information for any purpose that is unrelated to operating our business and delivering our services.</p>
+    </div>
+
+    <!-- 4. SMS / TEXT MESSAGING TERMS — CRITICAL A2P SECTION -->
+    <div class="legal-section">
+      <h2>4. SMS and Text Messaging Terms</h2>
+      <p>By providing your phone number and opting in through any of our forms, booking pages, or other opt-in mechanisms, you consent to receive SMS text messages from AeroMarketing. These messages may include:</p>
+      <ul>
+        <li>Account and service notifications</li>
+        <li>Appointment reminders and confirmations</li>
+        <li>Marketing and promotional messages related to our services</li>
+      </ul>
+
+      <div class="sms-callout">
+        <p><strong>Message frequency:</strong> Message frequency varies depending on your interaction with us and any active campaigns or services.</p>
+        <p><strong>Message and data rates:</strong> Standard message and data rates may apply based on your wireless carrier plan.</p>
+        <p><strong>Opt-out:</strong> You can opt out of SMS messages at any time by replying <strong>STOP</strong> to any message you receive from us. You will receive a one-time confirmation and no further messages will be sent.</p>
+        <p><strong>Help:</strong> Reply <strong>HELP</strong> to any message for assistance, or contact us directly at <a href="mailto:aeros.markets@gmail.com">aeros.markets@gmail.com</a> or <a href="tel:+12485009765">(248) 500-9765</a>.</p>
+        <p><strong>No purchase required:</strong> Consent to receive SMS messages is not a condition of purchasing any service. You are not required to opt in to receive SMS to work with us.</p>
+      </div>
+
+      <p><strong>Data sharing for SMS:</strong> The following statement applies to how we handle your SMS opt-in data and consent information:</p>
+
+      <div class="carrier-statement">
+        <p>"No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties."</p>
+      </div>
+
+      <p>Your decision to opt in to SMS communications is yours alone and will be respected at all times. Opt-out requests are processed immediately.</p>
+    </div>
+
+    <!-- 5. HOW WE SHARE INFORMATION -->
+    <div class="legal-section">
+      <h2>5. How We Share Your Information</h2>
+      <p>We do not sell your personal information. We do not share your personal information with third parties for their own marketing purposes.</p>
+      <p>We may share your information only in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Service providers and subprocessors:</strong> We use tools to operate our business, such as advertising platforms (Meta, Google), CRM and scheduling software (GoHighLevel), and email tools. These providers only receive information needed to perform specific functions on our behalf and are not permitted to use it for other purposes.</li>
+        <li><strong>Legal requirements:</strong> We may disclose information if required by law, court order, or a valid legal process.</li>
+        <li><strong>Business transfers:</strong> If AeroMarketing is acquired or merges with another entity, your information may be transferred as part of that transaction.</li>
+      </ul>
+      <p>As stated in Section 4, SMS opt-in data and consent information is specifically excluded from any sharing with third parties under any circumstances.</p>
+    </div>
+
+    <!-- 6. COOKIES & ANALYTICS -->
+    <div class="legal-section">
+      <h2>6. Cookies and Analytics</h2>
+      <p>Our website uses cookies and similar tracking technologies to understand how visitors use the site. This includes basic analytics data like page views, session duration, and traffic sources.</p>
+      <p>We may also use ad platform pixels (such as the Meta Pixel or Google Tag) to measure the performance of any advertising campaigns we run for our own business. These pixels may set cookies on your browser as part of their standard operation.</p>
+      <p>Most browsers allow you to control cookies through your settings. Disabling cookies may affect how some features of the site work.</p>
+    </div>
+
+    <!-- 7. DATA SECURITY -->
+    <div class="legal-section">
+      <h2>7. Data Security</h2>
+      <p>We take reasonable technical and organizational measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. The tools and platforms we use maintain their own security practices.</p>
+      <p>That said, no method of transmission over the internet and no method of electronic storage is 100% secure. We cannot guarantee absolute security, but we take this responsibility seriously and work to minimize risk.</p>
+    </div>
+
+    <!-- 8. YOUR RIGHTS -->
+    <div class="legal-section">
+      <h2>8. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Request access to the personal information we hold about you</li>
+        <li>Request that we correct inaccurate information</li>
+        <li>Request that we delete your information, subject to any legal obligations we may have to retain it</li>
+        <li>Opt out of marketing communications at any time (SMS: reply STOP; email: use the unsubscribe link or contact us)</li>
+      </ul>
+      <p>To exercise any of these rights, contact us using the information in Section 12. We will respond within a reasonable timeframe.</p>
+    </div>
+
+    <!-- 9. THIRD-PARTY LINKS -->
+    <div class="legal-section">
+      <h2>9. Third-Party Links</h2>
+      <p>Our website may contain links to third-party websites, including booking tools and social platforms. We are not responsible for the privacy practices or content of those sites. When you leave our website, we encourage you to review the privacy policy of any site you visit.</p>
+    </div>
+
+    <!-- 10. CHILDREN'S PRIVACY -->
+    <div class="legal-section">
+      <h2>10. Children's Privacy</h2>
+      <p>Our website and services are not directed to children under the age of 13, and we do not knowingly collect personal information from anyone under 18. If you believe a minor has submitted information to us, please contact us and we will delete it promptly.</p>
+    </div>
+
+    <!-- 11. CHANGES TO THIS POLICY -->
+    <div class="legal-section">
+      <h2>11. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of our website or services after changes are posted constitutes your acceptance of the updated policy.</p>
+    </div>
+
+    <!-- 12. CONTACT US -->
+    <div class="legal-section">
+      <h2>12. Contact Us</h2>
+      <p>If you have questions about this Privacy Policy or how we handle your information, or if you want to exercise your rights, you can reach us here:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:aeros.markets@gmail.com">aeros.markets@gmail.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+12485009765">(248) 500-9765</a></li>
+        <li><strong>Website:</strong> <a href="https://www.aeromarketing.org">https://www.aeromarketing.org</a></li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-in">
+    <div>
+      <div class="footer-logo">
+        <img src="logo.png" alt="AeroMarketing" loading="lazy" />
+      </div>
+      <p class="footer-tag">Meta and Google ads for local service businesses. Full funnel: ads, landing pages, and GHL setup.</p>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <ul>
+        <li>Meta Ads</li>
+        <li>Google Ads</li>
+        <li>Landing Pages</li>
+        <li>GHL CRM Setup</li>
+        <li>Lead Nurture Sequences</li>
+        <li>Website Build</li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+12485009765">(248) 500-9765</a></li>
+        <li><a href="mailto:aeros.markets@gmail.com">aeros.markets@gmail.com</a></li>
+        <li><a href="book.html">Book a Strategy Call</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <p class="footer-copy">&copy; 2026 AeroMarketing. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
