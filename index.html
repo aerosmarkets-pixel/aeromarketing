@@ -21,6 +21,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- META PIXEL — paste your Pixel ID between the quotes on the fbq('init', ...) line, then uncomment this whole block before running ads.
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -196,6 +207,30 @@
     @media (hover:hover) and (pointer:fine) { .why-card:hover { border-color: var(--border-w); } }
     .why-card h4 { font-size: .9rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
     .why-card p { font-size: .835rem; color: var(--body); line-height: 1.62; }
+
+    /* WORK / PORTFOLIO */
+    .work-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    @media (max-width: 900px) { .work-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; } }
+    .work-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: transform .25s cubic-bezier(.23,1,.32,1), border-color .25s; }
+    @media (hover:hover) and (pointer:fine) { .work-card:hover { transform: translateY(-4px); border-color: rgba(232,69,58,0.4); } }
+    .work-chrome { display: flex; align-items: center; gap: 7px; padding: 11px 14px; background: #15151D; border-bottom: 1px solid var(--border); }
+    .work-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; opacity: .8; }
+    .work-url { margin-left: 8px; font-size: .68rem; color: var(--muted); font-family: var(--font-b); letter-spacing: .02em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .work-shot { width: 100%; aspect-ratio: 1100 / 739; object-fit: cover; object-position: top center; }
+    .work-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 15px 18px; }
+    .work-name { font-family: var(--font-h); font-size: .95rem; font-weight: 700; color: var(--white); }
+    .work-tag { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+    .work-note { text-align: center; margin-top: 30px; font-size: .85rem; color: var(--muted); }
+
+    /* FOUNDER BAND */
+    .founder { padding: 92px 0; background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .founder::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 640px; height: 380px; background: radial-gradient(ellipse, rgba(232,69,58,0.07) 0%, transparent 65%); pointer-events: none; }
+    .founder-in { max-width: 840px; margin: 0 auto; padding: 0 28px; text-align: center; position: relative; }
+    .founder-mark { width: 52px; height: 52px; margin: 0 auto 26px; border: 1px solid var(--border-w); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: var(--font-h); font-weight: 800; font-size: 1.4rem; color: var(--accent); }
+    .founder-quote { font-family: var(--font-h); font-size: clamp(1.5rem, 3.2vw, 2.25rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.22; color: var(--white); }
+    .founder-quote .hl { color: var(--accent); }
+    .founder-sub { margin: 22px auto 0; max-width: 580px; font-size: 1rem; color: var(--body); line-height: 1.75; }
+    .founder-by { margin-top: 26px; font-size: .74rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
     /* BOOKING */
     .book-sec { padding: 96px 0; background: var(--bg); position: relative; overflow: hidden; }
@@ -407,8 +442,60 @@
   </div>
 </section>
 
+<!-- WORK / FUNNELS WE BUILD -->
+<section class="sec sec-alt" id="work">
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">The Funnels We Build</h2>
+      <p class="rev" data-d="1">Your ads are only half the job. They run to a landing page built to convert, not a generic website. Here's the kind of page your leads land on.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-card rev">
+        <div class="work-chrome">
+          <span class="work-dot" style="background:#ff5f57"></span>
+          <span class="work-dot" style="background:#febc2e"></span>
+          <span class="work-dot" style="background:#28c840"></span>
+          <span class="work-url">crystal-clear-window-washing</span>
+        </div>
+        <img class="work-shot" src="work-crystalclear.jpg" alt="Crystal Clear window washing landing page" loading="lazy" />
+        <div class="work-meta">
+          <span class="work-name">Crystal Clear</span>
+          <span class="work-tag">Window Washing</span>
+        </div>
+      </div>
+      <div class="work-card rev" data-d="1">
+        <div class="work-chrome">
+          <span class="work-dot" style="background:#ff5f57"></span>
+          <span class="work-dot" style="background:#febc2e"></span>
+          <span class="work-dot" style="background:#28c840"></span>
+          <span class="work-url">ridgeline-concrete-hardscape</span>
+        </div>
+        <img class="work-shot" src="work-ridgeline.jpg" alt="Ridgeline concrete and hardscape landing page" loading="lazy" />
+        <div class="work-meta">
+          <span class="work-name">Ridgeline</span>
+          <span class="work-tag">Concrete</span>
+        </div>
+      </div>
+      <div class="work-card rev" data-d="2">
+        <div class="work-chrome">
+          <span class="work-dot" style="background:#ff5f57"></span>
+          <span class="work-dot" style="background:#febc2e"></span>
+          <span class="work-dot" style="background:#28c840"></span>
+          <span class="work-url">trueview-window-cleaning</span>
+        </div>
+        <img class="work-shot" src="work-trueview.jpg" alt="TrueView window cleaning landing page" loading="lazy" />
+        <div class="work-meta">
+          <span class="work-name">TrueView</span>
+          <span class="work-tag">Window Cleaning</span>
+        </div>
+      </div>
+    </div>
+    <p class="work-note rev">A look at the landing pages we design for local service niches. Yours is built from scratch for your market.</p>
+  </div>
+</section>
+
 <!-- PROCESS -->
-<section class="sec sec-alt" id="process">
+<section class="sec" id="process">
   <div class="wrap">
     <div class="sec-hd">
       <h2 class="rev">How It Works</h2>
@@ -432,6 +519,16 @@
         <p>Campaigns go live. Leads come in. We send weekly reports and keep optimizing the numbers.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- FOUNDER BAND -->
+<section class="founder">
+  <div class="founder-in">
+    <div class="founder-mark rev">A</div>
+    <p class="founder-quote rev" data-d="1">You're not hiring an agency. You're hiring <span class="hl">the person who builds your ads.</span></p>
+    <p class="founder-sub rev" data-d="2">No account managers, no handoffs, no junior running your budget. When you book a call, you talk to Ason. The same person who builds, launches, and reports on your campaigns every week. That means straight answers and changes that actually happen fast.</p>
+    <p class="founder-by rev" data-d="3">Ason &middot; Founder, AeroMarketing</p>
   </div>
 </section>
 
@@ -562,6 +659,7 @@
         <li><a href="tel:+12485009765">(248) 500-9765</a></li>
         <li><a href="mailto:aeros.markets@gmail.com">aeros.markets@gmail.com</a></li>
         <li><a href="book.html">Book a Strategy Call</a></li>
+        <li>1329 Coach House Lane, South Lyon, MI 48178</li>
       </ul>
     </div>
   </div>
@@ -674,5 +772,7 @@
     }
   })();
 </script>
+<!-- GHL Chat Widget -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a432f056112ba37bb6cda85" data-source="WEB_USER"></script>
 </body>
 </html>
