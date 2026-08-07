@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CRM Setup for Local Service Businesses | AeroMarketing</title>
+<meta name="description" content="A CRM built around how local service businesses actually work. Missed call text back, instant lead alerts, booking calendar, and a pipeline you can read at a glance." />
+<meta property="og:title" content="CRM Setup for Local Service Businesses | AeroMarketing" />
+<meta property="og:description" content="Missed call text back, instant lead alerts, booking calendar, and a pipeline you can read at a glance." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="og-image.png" />
+<link rel="canonical" href="https://www.aeromarketing.org/ghl-crm.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="site.css" />
+<style>
+.pipe{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:900px}
+.pipe-col{background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:18px 16px}
+.pipe-col .mono{display:block;margin-bottom:10px;font-size:.66rem}
+.pipe-col h4{font-size:1rem;font-weight:700;margin-bottom:6px}
+.pipe-col p{font-size:.83rem;margin:0}
+.pipe-col:last-child{border-color:rgba(232,69,58,.32);background:rgba(232,69,58,.05)}
+@media (max-width:720px){.pipe{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="index.html" class="hdr-logo"><img src="logo.png" alt="AeroMarketing" /></a>
+    <nav class="hdr-nav">
+      <a href="index.html#machine">The System</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#process">How It Works</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="hdr-r">
+      <a href="tel:+12485009765" class="hdr-tel">(248) 500-9765</a>
+      <a href="book.html" class="btn btn-p btn-s">Book a Call</a>
+    </div>
+  </div>
+</header>
+
+<section class="shero">
+  <div class="wrap shero-in">
+    <div>
+      <div class="crumb rev"><a href="index.html">Services</a> <span>/</span> <span class="n">[004]</span> <span>CRM Setup</span></div>
+      <h1 class="rev" data-d="1">The lead came in. <em>Then what?</em></h1>
+      <p class="shero-sub rev" data-d="2">Most local businesses lose more money between the lead arriving and somebody calling it than they ever lose on ad spend. This is the part that closes that gap, and it runs whether you are free or up a ladder.</p>
+      <div class="shero-cta rev" data-d="3">
+        <a href="book.html" class="btn btn-p">Book a Free Strategy Call</a>
+        <a href="tel:+12485009765" class="btn btn-o">Call (248) 500-9765</a>
+      </div>
+    </div>
+    <div class="rail rev" data-d="2">
+      <div class="rail-row"><span class="rail-k">Built on</span><span class="rail-v">GoHighLevel</span></div>
+      <div class="rail-row"><span class="rail-k">Setup time</span><span class="rail-v">About one week</span></div>
+      <div class="rail-row"><span class="rail-k">Runs</span><span class="rail-v">Without you</span></div>
+      <div class="rail-row"><span class="rail-k">Account</span><span class="rail-v">In your name</span></div>
+      <div class="rail-row"><span class="rail-k">Add-on</span><span class="rail-v">Not required</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">Where the money actually goes missing</h2>
+      <p class="rev" data-d="1">None of these are ad problems. All of them are happening right now in most local businesses, and all of them are quiet.</p>
+    </div>
+    <div class="ledger">
+      <div class="led rev">
+        <div class="led-n">01</div>
+        <h3>The call you missed at 2pm</h3>
+        <p>You were under a sink. They called, got voicemail, hung up without leaving one, and called the next number on the list. You will never know that happened, and it happens most days.</p>
+      </div>
+      <div class="led rev" data-d="1">
+        <div class="led-n">02</div>
+        <h3>The form you found on Thursday</h3>
+        <p>They submitted Monday night. By Thursday they have already had somebody out. Speed matters more than almost anything else and a form inbox is not speed.</p>
+      </div>
+      <div class="led rev" data-d="2">
+        <div class="led-n">03</div>
+        <h3>The quote you sent and forgot</h3>
+        <p>They did not say no. They said they would think about it, and then life happened for both of you. Nobody followed up. That job is still out there unclaimed.</p>
+      </div>
+      <div class="led rev" data-d="3">
+        <div class="led-n">04</div>
+        <h3>The customer who would have reviewed you</h3>
+        <p>They were thrilled. They meant to leave a review. You meant to ask. Neither happened and your Google profile stayed at eleven reviews for another year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKFLOW 1 -->
+<section class="sec sec-alt">
+  <div class="grid-tex"></div>
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">Missed call text back</h2>
+      <p class="rev" data-d="1">This is a real workflow, drawn exactly as it runs. Someone calls, you cannot pick up, and this fires on its own within seconds.</p>
+    </div>
+    <div class="flow">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-b">
+          <h4>A call comes in and goes unanswered</h4>
+          <p>Busy, no answer, or straight to voicemail. All three count. You are on a job and the phone is in the truck.</p>
+          <span class="tag">Trigger</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-b">
+          <h4>They get a text back automatically</h4>
+          <p>"Hey, sorry we missed your call. This is [your business]. What can we help you with?" Sent before they have finished dialing your competitor.</p>
+          <span class="tag">Automatic · No action from you</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-b">
+          <h4>You get alerted with their number</h4>
+          <p>A text to your phone telling you who called and that they have already been contacted. You call back when you are off the ladder, not never.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-b">
+          <h4>The conversation continues by text</h4>
+          <p>Most people would rather text than leave a voicemail. Half of these turn into a booked job without a phone call ever happening.</p>
+        </div>
+      </div>
+    </div>
+    <div class="flow-foot rev">
+      <p>This one automation is usually the easiest money in the entire system. You already paid for those calls. This stops them evaporating while you are working.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORKFLOW 2 -->
+<section class="sec">
+  <div class="grid-tex"></div>
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">New lead, first five minutes</h2>
+      <p class="rev" data-d="1">What happens the second somebody submits a form from your ad. Same thing, drawn as it runs.</p>
+    </div>
+    <div class="flow">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-b">
+          <h4>Form submitted</h4>
+          <p>From your landing page or your ad. Their name, number, and what they need lands in the pipeline immediately.</p>
+          <span class="tag">Trigger</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-b">
+          <h4>Your phone buzzes first</h4>
+          <p>Before anything else fires, you get told. Name and number, so you can call while they are still on the page.</p>
+          <span class="tag">Speed is the whole game</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-b">
+          <h4>They get a text and an email</h4>
+          <p>Confirming somebody real received it and is coming back to them. This alone stops most people from continuing to shop around.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-b">
+          <h4>System waits for a reply</h4>
+          <p>If they answer, the automation steps back and lets you take the conversation over. It is not trying to hold a fake chat with your customer.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">05</div>
+        <div class="step-b">
+          <h4>No reply means follow-up starts</h4>
+          <p>They go into a nurture sequence instead of a dead pile. That is the next service and it picks up exactly here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">A pipeline you can read in three seconds</h2>
+      <p class="rev" data-d="1">Every lead sits in one of four columns. You drag them right as they move. That is the entire training.</p>
+    </div>
+    <div class="pipe">
+      <div class="pipe-col rev">
+        <span class="mono">01</span>
+        <h4>Contacted</h4>
+        <p>Lead came in, first message sent.</p>
+      </div>
+      <div class="pipe-col rev" data-d="1">
+        <span class="mono">02</span>
+        <h4>Replied</h4>
+        <p>They responded. A real conversation is happening.</p>
+      </div>
+      <div class="pipe-col rev" data-d="2">
+        <span class="mono">03</span>
+        <h4>Quoted</h4>
+        <p>Estimate is out. Follow-up runs automatically.</p>
+      </div>
+      <div class="pipe-col rev" data-d="3">
+        <span class="mono">04</span>
+        <h4>Won</h4>
+        <p>Job booked. Review request fires after completion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">Everything in the setup</h2>
+    </div>
+    <div class="dlv-grid">
+      <div class="dlv rev">
+        <span class="dlv-n">[01]</span>
+        <h3>Pipeline build</h3>
+        <p>Stages matched to how you actually sell, not a generic sales funnel borrowed from software companies.</p>
+      </div>
+      <div class="dlv rev" data-d="1">
+        <span class="dlv-n">[02]</span>
+        <h3>Missed call text back</h3>
+        <p>The workflow above, live on your number, running whether you are working or asleep.</p>
+      </div>
+      <div class="dlv rev" data-d="2">
+        <span class="dlv-n">[03]</span>
+        <h3>Instant lead alerts</h3>
+        <p>Text to your phone the moment anything comes in from any source.</p>
+      </div>
+      <div class="dlv rev" data-d="3">
+        <span class="dlv-n">[04]</span>
+        <h3>Booking calendar</h3>
+        <p>People pick a slot themselves. No back and forth texting about Tuesday afternoon.</p>
+      </div>
+      <div class="dlv rev">
+        <span class="dlv-n">[05]</span>
+        <h3>Appointment reminders</h3>
+        <p>Automatic texts before the appointment so fewer people forget you are coming.</p>
+      </div>
+      <div class="dlv rev" data-d="1">
+        <span class="dlv-n">[06]</span>
+        <h3>Review requests</h3>
+        <p>Fires after the job is marked done. This is how a Google profile actually grows.</p>
+      </div>
+      <div class="dlv rev" data-d="2">
+        <span class="dlv-n">[07]</span>
+        <h3>One inbox</h3>
+        <p>Texts, emails, and Facebook messages in a single place instead of three apps.</p>
+      </div>
+      <div class="dlv rev" data-d="3">
+        <span class="dlv-n">[08]</span>
+        <h3>Training on it</h3>
+        <p>Walked through it live until you can use it without me. It is not much use if only I know how it works.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">When you don't need this</h2>
+    </div>
+    <div class="not-grid">
+      <div class="not rev">
+        <span class="not-x">&times;</span>
+        <div>
+          <h4>You already have a CRM that works</h4>
+          <p>If you are on Jobber or ServiceTitan and it catches everything, keep it. We will run ads into what you have rather than sell you a replacement.</p>
+        </div>
+      </div>
+      <div class="not rev" data-d="1">
+        <span class="not-x">&times;</span>
+        <div>
+          <h4>You genuinely answer every call</h4>
+          <p>Some one person operations really do pick up every time. If that is you, the value here drops a lot and I would rather you spend the money on ads.</p>
+        </div>
+      </div>
+      <div class="not rev" data-d="2">
+        <span class="not-x">&times;</span>
+        <div>
+          <h4>You are not running ads yet</h4>
+          <p>A system for catching leads matters less when there are not many leads. Get traffic first, then build the thing that catches it.</p>
+        </div>
+      </div>
+      <div class="not rev" data-d="3">
+        <span class="not-x">&times;</span>
+        <div>
+          <h4>Nobody will use it</h4>
+          <p>If it will not get opened, it is shelfware. This works when somebody actually moves cards across the board. Be honest with yourself about that.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-hd"><h2 class="rev">Questions about the CRM</h2></div>
+    <div class="faq">
+      <div class="fq rev">
+        <button class="fq-q">Is there a monthly software cost on top?<span class="fq-i">+</span></button>
+        <div class="fq-a"><div><p>Yes. The platform has its own monthly fee and text messages cost fractions of a cent each. That is separate from our setup fee and separate from ad spend. You get the real numbers on the call so there are no surprises.</p></div></div>
+      </div>
+      <div class="fq rev">
+        <button class="fq-q">Do I lose my phone number?<span class="fq-i">+</span></button>
+        <div class="fq-a"><div><p>No. Calls still ring your phone the way they always have. The system sits alongside it and reacts when a call goes unanswered. Your number stays your number.</p></div></div>
+      </div>
+      <div class="fq rev">
+        <button class="fq-q">What if I stop working with you?<span class="fq-i">+</span></button>
+        <div class="fq-a"><div><p>The account is in your name. You keep it, the contacts, and the workflows, and you carry on paying the platform directly. Nothing gets held over you to make leaving painful.</p></div></div>
+      </div>
+      <div class="fq rev">
+        <button class="fq-q">Will customers know it's automated?<span class="fq-i">+</span></button>
+        <div class="fq-a"><div><p>The first text is deliberately short and plain so it reads like a person. It is not pretending to be a chatbot conversation. The moment they reply, a real human takes over, and that human is you.</p></div></div>
+      </div>
+      <div class="fq rev">
+        <button class="fq-q">I'm not technical. Can I actually run this?<span class="fq-i">+</span></button>
+        <div class="fq-a"><div><p>The day to day is dragging a card from one column to the next and replying to texts. That is it. Everything complicated sits behind the scenes and I maintain it. You get walked through the whole thing live before it goes anywhere near a real customer.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-hd"><h2 class="rev">Where this connects</h2></div>
+    <div class="nxt-grid">
+      <a href="lead-nurture.html" class="nxt rev">
+        <div><span class="nxt-k">[005]</span><h4>Lead Nurture</h4></div>
+        <span class="nxt-go">&rarr;</span>
+      </a>
+      <a href="landing-pages.html" class="nxt rev" data-d="1">
+        <div><span class="nxt-k">[003]</span><h4>Landing Pages</h4></div>
+        <span class="nxt-go">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="fcta">
+  <div class="wrap fcta-in">
+    <h2 class="rev">How many calls did you miss last week?</h2>
+    <p class="rev" data-d="1">Most people have no idea, which is the point. Book the call and we will look at what is slipping through before deciding if this is worth building.</p>
+    <div class="fcta-cta rev" data-d="2">
+      <a href="book.html" class="btn btn-p">Book a Free Strategy Call</a>
+      <a href="tel:+12485009765" class="btn btn-o">Call (248) 500-9765</a>
+    </div>
+  </div>
+</section>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <div>
+        <div class="ftr-logo"><img src="logo.png" alt="AeroMarketing" /></div>
+        <p class="ftr-tag">Meta and Google ads for local service businesses.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="meta-ads.html">Meta Ads</a></li>
+          <li><a href="google-ads.html">Google Ads</a></li>
+          <li><a href="landing-pages.html">Landing Pages</a></li>
+          <li><a href="ghl-crm.html">CRM Setup</a></li>
+          <li><a href="lead-nurture.html">Lead Nurture</a></li>
+          <li><a href="websites.html">Website Build</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+12485009765">(248) 500-9765</a></li>
+          <li><a href="mailto:aeros.markets@gmail.com">aeros.markets@gmail.com</a></li>
+          <li><a href="book.html">Book a call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-btm">
+      <span>&copy; <span id="yr">2026</span> AeroMarketing. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy</a> &nbsp;&nbsp; <a href="terms.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="msb">
+  <a href="tel:+12485009765" class="btn btn-o">Call Now</a>
+  <a href="book.html" class="btn btn-p">Book a Call</a>
+</div>
+
+<script src="site.js"></script>
+<!-- GHL Chat Widget -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a432f056112ba37bb6cda85" data-source="WEB_USER"></script>
+</body>
+</html>

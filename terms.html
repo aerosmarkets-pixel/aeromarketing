@@ -1,125 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service — AeroMarketing</title>
-  <meta name="description" content="AeroMarketing's terms of service. Read before booking a strategy call or engaging our services." />
-  <link rel="canonical" href="https://www.aeromarketing.org/terms.html" />
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg:        #111117;
-      --bg2:       #17171F;
-      --card:      #1E1E28;
-      --accent:    #E8453A;
-      --accent-h:  #D13B30;
-      --white:     #FFFFFF;
-      --heading:   #FFFFFF;
-      --body:      #8C8CA8;
-      --muted:     #8484A0;
-      --border:    rgba(255,255,255,0.07);
-      --border-w:  rgba(255,255,255,0.15);
-      --radius:    10px;
-      --radius-btn:7px;
-      --shadow:    0 8px 40px rgba(0,0,0,0.5);
-      --font-h:    'Space Grotesk', sans-serif;
-      --font-b:    'DM Sans', sans-serif;
-      --max:       1140px;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font-b); background: var(--bg); color: var(--body); line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100dvh; display: flex; flex-direction: column; }
-    h1, h2, h3 { font-family: var(--font-h); color: var(--heading); line-height: 1.15; }
-    a { color: var(--accent); text-decoration: none; transition: color .15s; }
-    a:hover { color: var(--accent-h); }
-    img { display: block; max-width: 100%; height: auto; }
-
-    /* HEADER */
-    .hdr { background: rgba(17,17,23,.92); border-bottom: 1px solid var(--border); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
-    .hdr-in { max-width: var(--max); margin: 0 auto; padding: 0 28px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .hdr-logo img { height: 44px; width: auto; mix-blend-mode: screen; }
-    .hdr-phone { font-weight: 600; font-size: .9rem; color: var(--heading); }
-    .hdr-phone a { color: var(--heading); text-decoration: none; }
-    .hdr-back { font-size: .85rem; color: var(--body); transition: color .15s; text-decoration: none; }
-    @media (hover:hover) { .hdr-back:hover { color: var(--white); } }
-    @media (max-width: 640px) { .hdr-phone { display: none; } }
-
-    /* MAIN */
-    main { flex: 1; padding: 64px 0 96px; }
-
-    /* LEGAL CONTENT WRAPPER */
-    .legal-wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
-
-    .legal-header { padding: 48px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
-    .legal-tag {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 18px;
-    }
-    .legal-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -.035em; margin-bottom: 14px; }
-    .legal-meta { font-size: .875rem; color: var(--muted); }
-
-    /* CONTENT SECTIONS */
-    .legal-section { margin-bottom: 44px; }
-    .legal-section h2 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      letter-spacing: -.02em;
-      color: var(--heading);
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-    }
-    .legal-section p { font-size: .95rem; color: var(--body); line-height: 1.78; margin-bottom: 14px; }
-    .legal-section p:last-child { margin-bottom: 0; }
-    .legal-section ul { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 14px 0; padding-left: 0; }
-    .legal-section ul li { font-size: .95rem; color: var(--body); line-height: 1.7; display: flex; align-items: flex-start; gap: 10px; }
-    .legal-section ul li::before { content: ''; width: 4px; height: 4px; background: var(--accent); border-radius: 50%; flex-shrink: 0; margin-top: 9px; opacity: .7; }
-
-    /* IMPORTANT NOTICE CALLOUT */
-    .notice-callout { background: var(--card); border: 1px solid rgba(232,69,58,0.25); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 22px 28px; margin: 18px 0; }
-    .notice-callout p { font-size: .93rem; color: var(--body); line-height: 1.78; margin-bottom: 10px; }
-    .notice-callout p:last-child { margin-bottom: 0; }
-    .notice-callout strong { color: var(--white); font-weight: 600; }
-
-    /* FOOTER */
-    .footer { background: var(--bg); border-top: 1px solid var(--border); padding: 52px 0 28px; }
-    .footer-in { max-width: var(--max); margin: 0 auto; padding: 0 28px; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; }
-    @media (max-width: 720px) { .footer-in { grid-template-columns: 1fr; gap: 28px; } }
-    .footer-logo img { height: 40px; margin-bottom: 14px; mix-blend-mode: screen; }
-    .footer-tag { font-size: .84rem; color: var(--muted); line-height: 1.65; max-width: 250px; }
-    .fc h4 { font-size: .7rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
-    .fc ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-    .fc ul li { font-size: .84rem; color: var(--body); }
-    .fc ul li::before { display: none; }
-    .fc ul li a { color: var(--body); transition: color .15s; text-decoration: none; }
-    @media (hover:hover) and (pointer:fine) { .fc ul li a:hover { color: var(--white); } }
-    .footer-bot { max-width: var(--max); margin: 28px auto 0; padding: 20px 28px 0; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-    .footer-copy { font-size: .78rem; color: var(--muted); }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Service | AeroMarketing</title>
+<meta name="description" content="AeroMarketing's terms of service. Read before booking a strategy call or engaging our services." />
+<meta name="robots" content="noindex, follow" />
+<link rel="canonical" href="https://www.aeromarketing.org/terms.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="site.css" />
 </head>
 <body>
 
 <header class="hdr">
   <div class="hdr-in">
-    <div class="hdr-logo">
-      <a href="index.html"><img src="logo.png" alt="AeroMarketing" /></a>
+    <a href="index.html" class="hdr-logo"><img src="logo.png" alt="AeroMarketing" /></a>
+    <nav class="hdr-nav">
+      <a href="index.html#machine">The System</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#process">How It Works</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="hdr-r">
+      <a href="tel:+12485009765" class="hdr-tel">(248) 500-9765</a>
+      <a href="book.html" class="btn btn-p btn-s">Book a Call</a>
     </div>
-    <div class="hdr-phone"><a href="tel:+12485009765">(248) 500-9765</a></div>
-    <a href="index.html" class="hdr-back">&larr; Back to site</a>
   </div>
 </header>
 
-<main>
-  <div class="legal-wrap">
+<main class="legal">
+  <div class="legal-in">
 
-    <div class="legal-header">
-      <div class="legal-tag">Legal</div>
+
+    <div class="legal-hd">
+      <div class="legal-meta">Legal</div>
       <h1>Terms of Service</h1>
       <p class="legal-meta">Last updated: June 19, 2026</p>
     </div>
@@ -149,7 +66,7 @@
     <!-- 3. NO GUARANTEE OF RESULTS -->
     <div class="legal-section">
       <h2>3. No Guarantee of Results</h2>
-      <div class="notice-callout">
+      <div class="legal-callout">
         <p><strong>AeroMarketing does not guarantee specific advertising outcomes, lead volume, revenue, or return on ad spend.</strong></p>
         <p>Advertising results depend on a wide range of factors outside our control, including market conditions, ad platform algorithm changes, competitive landscape, offer quality, and client responsiveness to leads. We do not promise or represent that any client will achieve specific results from our services.</p>
         <p>We work hard to build campaigns that perform and optimize them continuously, but results vary and past performance in any niche is not a guarantee of future results for any individual client.</p>
@@ -243,44 +160,45 @@
         <li><strong>Phone:</strong> <a href="tel:+12485009765">(248) 500-9765</a></li>
         <li><strong>Website:</strong> <a href="https://www.aeromarketing.org">https://www.aeromarketing.org</a></li>
       </ul>
-    </div>
-
   </div>
 </main>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-in">
-    <div>
-      <div class="footer-logo">
-        <img src="logo.png" alt="AeroMarketing" loading="lazy" />
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <div>
+        <div class="ftr-logo"><img src="logo.png" alt="AeroMarketing" /></div>
+        <p class="ftr-tag">Meta and Google ads for local service businesses.</p>
       </div>
-      <p class="footer-tag">Meta and Google ads for local service businesses. Full funnel: ads, landing pages, and GHL setup.</p>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="meta-ads.html">Meta Ads</a></li>
+          <li><a href="google-ads.html">Google Ads</a></li>
+          <li><a href="landing-pages.html">Landing Pages</a></li>
+          <li><a href="ghl-crm.html">CRM Setup</a></li>
+          <li><a href="lead-nurture.html">Lead Nurture</a></li>
+          <li><a href="websites.html">Website Build</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+12485009765">(248) 500-9765</a></li>
+          <li><a href="mailto:aeros.markets@gmail.com">aeros.markets@gmail.com</a></li>
+          <li><a href="book.html">Book a call</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="fc">
-      <h4>Services</h4>
-      <ul>
-        <li>Meta Ads</li>
-        <li>Google Ads</li>
-        <li>Landing Pages</li>
-        <li>GHL CRM Setup</li>
-        <li>Lead Nurture Sequences</li>
-        <li>Website Build</li>
-      </ul>
+    <div class="ftr-btm">
+      <span>&copy; <span id="yr">2026</span> AeroMarketing. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy</a> &nbsp;&nbsp; <a href="terms.html">Terms</a></span>
     </div>
-    <div class="fc">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="tel:+12485009765">(248) 500-9765</a></li>
-        <li><a href="mailto:aeros.markets@gmail.com">aeros.markets@gmail.com</a></li>
-        <li><a href="book.html">Book a Strategy Call</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bot">
-    <p class="footer-copy">&copy; 2026 AeroMarketing. All rights reserved.</p>
   </div>
 </footer>
 
+<script src="site.js"></script>
+<!-- GHL Chat Widget -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a432f056112ba37bb6cda85" data-source="WEB_USER"></script>
 </body>
 </html>
