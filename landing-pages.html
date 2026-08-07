@@ -270,15 +270,73 @@
   </div>
 </section>
 
+<style>
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.gal-i{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;transition:border-color .22s var(--ease),transform .22s var(--ease)}
+@media (hover:hover) and (pointer:fine){
+  .gal-i:hover{border-color:var(--border-hi);transform:translateY(-3px)}
+}
+.gal-i img{width:100%;display:block;border-bottom:1px solid var(--border)}
+.gal-t{padding:18px 20px}
+.gal-t .mono{display:block;margin-bottom:7px}
+.gal-t h3{font-size:1.06rem;font-weight:700;margin-bottom:5px}
+.gal-t p{font-size:.86rem;margin:0}
+.gal-note{margin-top:22px;font-size:.9rem;color:var(--muted);max-width:64ch}
+</style>
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2 class="rev">Sample builds</h2>
+      <p class="rev" data-d="1">These are pages built to demonstrate the standard and the structure, not client campaigns. Each one is a different niche with a different problem to solve.</p>
+    </div>
+    <div class="gal">
+      <div class="gal-i rev">
+        <img src="work-crystalclear.jpg" alt="Sample landing page build for a window washing company" loading="lazy" />
+        <div class="gal-t">
+          <span class="mono">Window Washing</span>
+          <h3>Crystal Clear</h3>
+          <p>Light build. Before and after imagery carries the offer, streak-free guarantee sits above the form.</p>
+        </div>
+      </div>
+      <div class="gal-i rev" data-d="1">
+        <img src="work-ridgeline.jpg" alt="Sample landing page build for a concrete and hardscape company" loading="lazy" />
+        <div class="gal-t">
+          <span class="mono">Concrete &amp; Hardscape</span>
+          <h3>Ridgeline</h3>
+          <p>Heavier, industrial build. Big type and finished work photography for a higher ticket decision.</p>
+        </div>
+      </div>
+      <div class="gal-i rev" data-d="2">
+        <img src="work-trueview.jpg" alt="Sample landing page build for a residential window company" loading="lazy" />
+        <div class="gal-t">
+          <span class="mono">Residential Windows</span>
+          <h3>TrueView</h3>
+          <p>Dark build. Leads with the problem in the headline instead of the service name.</p>
+        </div>
+      </div>
+    </div>
+    <p class="gal-note rev">Every build gets different bones on purpose. Same designer, different structure, because a concrete company and a window cleaner are not selling the same decision.</p>
+  </div>
+</section>
+
 <section class="sec sec-alt">
   <div class="wrap">
     <div class="sec-hd"><h2 class="rev">Where this connects</h2></div>
     <div class="nxt-grid">
-      <a href="ghl-crm.html" class="nxt rev">
+      <a href="meta-ads.html" class="nxt rev">
+        <div><span class="nxt-k">[001]</span><h4>Meta Ads</h4></div>
+        <span class="nxt-go">&rarr;</span>
+      </a>
+      <a href="google-ads.html" class="nxt rev" data-d="1">
+        <div><span class="nxt-k">[002]</span><h4>Google Ads</h4></div>
+        <span class="nxt-go">&rarr;</span>
+      </a>
+      <a href="ghl-crm.html" class="nxt rev" data-d="2">
         <div><span class="nxt-k">[004]</span><h4>CRM Setup</h4></div>
         <span class="nxt-go">&rarr;</span>
       </a>
-      <a href="websites.html" class="nxt rev" data-d="1">
+      <a href="websites.html" class="nxt rev" data-d="3">
         <div><span class="nxt-k">[006]</span><h4>Website Build</h4></div>
         <span class="nxt-go">&rarr;</span>
       </a>
